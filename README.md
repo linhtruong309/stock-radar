@@ -24,11 +24,19 @@ pip install -r requirements-dev.txt
 
 cp .env.example .env        # then fill in the values
 docker compose up -d        # starts PostgreSQL and Redis
+python manage.py migrate    # creates the tables
+python manage.py runserver  # http://127.0.0.1:8000/health
+```
+
+Run the tests (PostgreSQL must be running):
+
+```bash
+pytest
 ```
 
 ## Roadmap
 
-- [ ] Project setup: Django, PostgreSQL and Redis in Docker
+- [x] Project setup: Django, PostgreSQL and Redis in Docker
 - [ ] Watchlist and portfolio models with a REST API
 - [ ] Live trade stream from Finnhub stored in PostgreSQL
 - [ ] Live prices pushed to the browser over WebSocket
