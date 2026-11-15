@@ -1,0 +1,17 @@
+# Web framework and REST API
+Django>=5.2,<7
+djangorestframework>=3.15
+
+# Real-time: WebSocket support, Redis message layer and the ASGI server
+channels>=4.1
+channels-redis>=4.2
+daphne>=4.1
+
+# PostgreSQL driver
+psycopg[binary]>=3.2
+
+# Market data stream from Finnhub
+websockets>=13
+
+# Reads settings and secrets from .env
+python-dotenv>=1.0
